@@ -1,0 +1,338 @@
+  /* HOME */
+  .box-home{
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    height:auto;
+    /* background-color: red; */
+    padding-top:25px;
+}
+.header{
+    width:100%;
+    height:50px;
+    /* background-color: red; */
+    display: flex;
+    justify-content: space-between;
+    padding-left:20px;
+    padding-right:30px;
+    align-items: center;
+}
+
+.icon-header{
+    font-size: 25px;
+}
+
+.box-pokedex{
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    padding-left:20px;
+    padding-right:10px;
+    height:100vh;
+    /* background-color: gray;; */
+}
+.block-pokedex-1{
+    width:100%;
+    height:50px;
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+}
+.block-pokedex-1 p {
+    font-weight: 900;
+    font-size: 24px;
+}
+.block-pokedex-2{
+    width:100%;
+    height:auto;
+    /* background-color: red; */
+    display: flex;
+    /* align-items: center; */
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.box-item{
+    width:47%;
+    height:130px;
+    background-color: #46d0b1;
+    border-radius:10px;
+    margin:5px;
+    /* margin:5px; */
+    display: flex;
+    flex-direction: row;
+}
+.box-item:hover{
+    cursor: pointer;
+    box-shadow		:    2px 5px 10px gray,
+                        -1px 0px 10px gray;
+   
+    
+}
+.pokedex-name{
+    height:auto;
+    width:70%;
+    /* background-color: pink; */
+    border-radius:10px;
+    display: flex;
+    justify-content: center;
+    /* border:1px solid black; */
+    flex-direction: column;
+    /* align-items: center; */
+    padding-left:5px;
+ 
+}
+.pokedex-name2{
+    height:auto;
+    width:30%;
+    /* background-color: pink; */
+    border-radius:10px;
+    display: flex;
+    justify-content: center;
+    /* border:1px solid black; */
+    flex-direction: column;
+    align-items: center;
+    /* padding-left:10px; */
+ 
+}
+
+
+.pokename{
+    color:white;
+    font-weight: 800;
+}
+
+.skill-mon{
+    width:90px;
+    height:20px;
+    display: flex;
+    justify-content: center;
+    background-color: #ecf0f1;
+    /* background-color: aliceblue; */
+   
+    margin:5px;
+    /* opacity: 0.75; */
+
+
+    align-items: center;
+    border-radius:10px;
+    /* opacity: 0.5; */
+    
+}
+.skill-mon p{
+    font-size:10px;
+    color:black;
+    font-weight: 900;
+    position: relative;
+    top:10px;
+}
+
+
+
+.img-pokemon{
+    width:80px;
+    position:relative;
+    left:-10px;
+    /* height:80%; */
+}
+
+.box-configuration{
+    width:100%;
+    display: flex;
+    justify-content: flex-end;
+    padding-right:40px;
+    position: fixed;
+    top:700px;
+    align-items: center;
+    z-index:30
+
+}
+.box-icon-config{
+    border-radius:50%;
+    background-color: #4834d4;
+    width:50px;
+    height:50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow		:    2px 5px 10px gray,
+                        -1px 0px 10px gray;
+    z-index:20;
+}
+.config{
+    color:white !important;
+    /* background-color: white; */
+    /* fill:white; */
+    
+}
+
+@media (max-width: 415px) {
+    /* HOME */
+.box-home{
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    height:auto;
+    /* background-color: red; */
+    padding-top:25px;
+}
+.header{
+    width:100%;
+    height:50px;
+    /* background-color: red; */
+    display: flex;
+    justify-content: space-between;
+    padding-left:20px;
+    padding-right:30px;
+    align-items: center;
+}
+
+.icon-header{
+    font-size: 25px;
+}
+
+.box-pokedex{
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    padding-left:10px;
+    padding-right:10px;
+    height:100vh;
+    /* background-color: gray;; */
+}
+.block-pokedex-1{
+    width:100%;
+    height:50px;
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+}
+.block-pokedex-1 p {
+    font-weight: 900;
+    font-size: 24px;
+}
+.block-pokedex-2{
+    width:100%;
+    height:auto;
+    /* background-color: red; */
+    display: flex;
+    /* align-items: center; */
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.box-item{
+    width:100%;
+    height:130px;
+    background-color: #46d0b1;
+    border-radius:10px;
+    margin:5px;
+    /* margin:5px; */
+    display: flex;
+    flex-direction: row;
+}
+.box-item:hover{
+    cursor: pointer;
+   
+    
+}
+.pokedex-name{
+    height:auto;
+    width:70%;
+    /* background-color: pink; */
+    border-radius:10px;
+    display: flex;
+    justify-content: center;
+    /* border:1px solid black; */
+    flex-direction: column;
+    /* align-items: center; */
+    padding-left:5px;
+ 
+}
+.pokedex-name2{
+    height:auto;
+    width:30%;
+    /* background-color: pink; */
+    border-radius:10px;
+    display: flex;
+    justify-content: center;
+    /* border:1px solid black; */
+    flex-direction: column;
+    align-items: center;
+    /* padding-left:10px; */
+ 
+}
+
+
+.pokename{
+    color:white;
+    font-weight: 800;
+}
+
+.skill-mon{
+    width:90px;
+    height:20px;
+    display: flex;
+    justify-content: center;
+    background-color: #ecf0f1;
+    /* background-color: aliceblue; */
+   
+    margin:5px;
+    /* opacity: 0.75; */
+
+
+    align-items: center;
+    border-radius:10px;
+    /* opacity: 0.5; */
+    
+}
+.skill-mon p{
+    font-size:10px;
+    color:black;
+    font-weight: 900;
+    position: relative;
+    top:10px;
+}
+
+
+
+.img-pokemon{
+    width:80px;
+    position:relative;
+    left:-10px;
+    /* height:80%; */
+}
+
+.box-configuration{
+    width:100%;
+    display: flex;
+    justify-content: flex-end;
+    padding-right:40px;
+    position: fixed;
+    top:700px;
+    align-items: center;
+    z-index:30
+
+}
+.box-icon-config{
+    border-radius:50%;
+    background-color: #4834d4;
+    width:50px;
+    height:50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow		:    2px 5px 10px gray,
+                        -1px 0px 10px gray;
+    z-index:20;
+}
+.config{
+    color:white !important;
+    /* background-color: white; */
+    /* fill:white; */
+    
+}
+
+/* HOME */
+
+}
