@@ -59,7 +59,7 @@ function Home(props){
         return renderPokemon.map((val,index)=>{
             
             return (
-            <Link to={`/detail/${val.name}`} style={{textDecoration:'none',width:'50%',paddingRight:'5px'}} >
+            <Link to={`/detail/${val.name}/${index+1}`} style={{textDecoration:'none',width:'50%',paddingRight:'5px'}} >
                 <div className="box-item" key={index+1}>
                         <div className="pokedex-name">
                             <p className="pokename">{val.name}</p>

@@ -10,12 +10,13 @@ import { Link } from 'react-router-dom'
 
 export default function Detail(){
 
-    let {pokemon} = useParams()
+    let {pokemon,id} = useParams()
    console.log(pokemon)
 
    const [dataPokemon,setDataPokemon]=useState([])
    const [isLoading,setIsLoading]=useState(true)
    const [activeTab,setActiveTab]=useState('1')
+   const [dataSpecies, setDataSpecies]=useState([])
 
    const toggle = tab => {
        console.log('tab jalan')
@@ -31,6 +32,13 @@ export default function Detail(){
         setIsLoading(false)
         
        }).catch((err)=>{ 
+           console.log(err)
+       })
+       Axios.get(`https://pokeapi.co/api/v2/pokemon-species/${id}`)
+       .then((res)=>{
+        console.log(res.data)
+        setDataSpecies(res.data)
+       }).catch((err)=>{
            console.log(err)
        })
    }
@@ -58,7 +66,7 @@ export default function Detail(){
        let renderPokemon = dataPokemon
        console.log(renderPokemon[0])
        return renderPokemon.map((val,index)=>{
-           console.log(val)
+           console.log(dataSpecies.egg_groups[0].name)
            return (
                <>
 
@@ -84,7 +92,7 @@ export default function Detail(){
                         <p>Weight</p>
                     </div>
                     <div className="abl-right">
-                        <p>{val.weight} KG</p>
+                        <p>{(val.weight/0.45359237).toFixed(2)} lbs, {val.weight} KG</p>
                     </div>
                 </div>
                
@@ -113,8 +121,8 @@ export default function Detail(){
                         <p>Gender</p>
                     </div>
                     <div className="abl-right">
-                        <p>OJAN</p>
-                        <p>OJAN 2</p>
+                        <p>Male</p>
+                        <p>GIRL</p>
                     </div>
                 </div>
                 <div className="abilities">
@@ -122,7 +130,7 @@ export default function Detail(){
                         <p>Egg Groups</p>
                     </div>
                     <div className="abl-right">
-                        <p>OJAN</p>
+                        <p>{dataSpecies.egg_groups[0].name}</p>
                     </div>
                 </div>
                 <div className="abilities">
@@ -130,7 +138,7 @@ export default function Detail(){
                         <p>Egg Cycles</p>
                     </div>
                     <div className="abl-right">
-                        <p>OJAN</p>
+                        <p>{dataSpecies.egg_groups[1].name}</p>
                     </div>
                 </div>
             </div>
@@ -248,7 +256,7 @@ export default function Detail(){
                                             <p>Type Defenses</p>
                                         </div>
                                         <div className="abl-right-2">
-                                            <p>the Effectiveness of each type on charmeleon</p>
+                                            <p>the Effectiveness of each type on {dataSpecies.name}</p>
                                         </div>
                                     </div>
                                 </TabPane>

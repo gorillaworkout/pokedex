@@ -75,7 +75,7 @@ function App(props) {
   return (
     <Switch>
       <Route exact path='/' component={Home}/>
-      <Route exact path='/detail/:pokemon' component={Detail}/>
+      <Route exact path='/detail/:pokemon/:id' component={Detail}/>
       {/* <Route exact path='/login' component={Login}/>
       <Route exact path='/pilihan' component={Pilihan}/>
       <Route exact path='/register' component={Register}/> */}
