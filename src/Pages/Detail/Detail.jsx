@@ -183,7 +183,7 @@ export default function Detail(){
                 <div className="box-pokedex2">
                     <div className="block-pokedex-1">
                         <div className="box-left">
-                            <p>{dataPokemon.name}</p>
+                            <p>{dataPokemon[0].name}</p>
                             <div className="box-ins-left">
                                 {renderAbility()}
                             </div>

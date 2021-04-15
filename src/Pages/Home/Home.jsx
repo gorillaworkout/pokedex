@@ -57,6 +57,7 @@ function Home(props){
         let renderPokemon = props.dataPokemon
         console.log(renderPokemon)
         return renderPokemon.map((val,index)=>{
+            
             return (
             <Link to={`/detail/${val.name}`} style={{textDecoration:'none',width:'50%',paddingRight:'5px'}} >
                 <div className="box-item" key={index+1}>
@@ -73,7 +74,7 @@ function Home(props){
                             }
                         </div>
                         <div className="pokedex-name2">
-                            <img src={val.sprites.front_default} className="img-pokemon"></img>
+                            <img src={val.sprites.other.dream_world.front_default} className="img-pokemon"></img>
                         </div>
                     </div>
              </Link>
